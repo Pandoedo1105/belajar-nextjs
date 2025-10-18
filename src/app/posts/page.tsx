@@ -3,14 +3,15 @@ import Link from "next/link";
 
 import {getPost} from "@/lib/api"
 import PostList from '@/components/PostList'
+import { allPost } from "@/lib/api";
 
 
-export default async function Home() {
-  const posts = await getPost();
+export default async function Page() {
+  const posts = await allPost();
   return (
 <>
     <div className="main-heading">
-      <h1>Selamat Datang di Next Js News</h1>
+      <h2>Daftar Tulisan</h2>
       <p className="subtitle">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque doloribus consequatur accusamus magnam architecto laudantium sed ipsa ex, eveniet distinctio nobis, mollitia alias ipsum ut a aperiam voluptates ratione iure.
       </p>
